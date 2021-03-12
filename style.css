@@ -1,0 +1,295 @@
+@font-face{
+    src: url(fonts/Lato-BoldItalic.ttf);
+    font-family: logo;
+}
+
+@font-face{
+    src: url(fonts/Lato-Bold.ttf);
+    font-family: title;
+}
+
+@font-face{
+    src: url(fonts/Lato-Regular.ttf);
+    font-family: all;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: all;
+    font-size: 18px;
+    color: #1c2530;
+}
+
+#logoDiv img{
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+}
+
+#logoDiv h1{
+    font-family: logo;
+    font-size: 50px;
+    text-align: center;
+    margin: 0;
+
+}
+
+#logoDiv{
+    margin: 20px auto;
+}
+
+#navbarDiv{
+    background-color: #1c2530;
+}
+
+#navbarDiv a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+#navbarDiv ul li{
+    background-color: #1c2530;
+    list-style-type: none;
+    display: inline-block;
+    line-height: 55px;
+    padding: 0 40px;
+}
+
+#navbarDiv ul{
+    padding: 0 50px;
+}
+
+.active{
+    background-color: #f7b661 !important;
+    color: #fff;
+}
+
+ul li, ul li:after, ul li:before{
+    transition: all .5s;
+}
+
+#navbarDiv ul li{  
+    position: relative;
+    z-index: 1;
+}
+
+#navbarDiv ul li:hover{
+    color: #916407;
+    cursor: pointer;
+}
+
+#navbarDiv ul li:after{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 1px;
+    content: '.';
+    color: transparent;
+    background-color: #f7b661;
+    visibility: none;
+    opacity: 0;
+    z-index: -1;
+}
+
+#navbarDiv ul li:hover:after{
+    visibility: visible;
+    opacity: 1;
+    height: 100%;
+}
+
+/* Banner */
+#bannerDiv img{
+    width: 100%;
+    height: 620px;
+    object-fit: cover;
+}
+
+#bannerDiv div.quote{
+    position: absolute;
+    top: 550px;
+    left: 60px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+/* Offer  */
+
+#offerDiv{
+    margin: 20px;
+}
+
+#offerDiv h2,
+#dailyMenu h2,
+#todaySpecial h2,
+#ourShop h2{
+    text-align: center;
+    font-size: 40px;
+    font-family: logo;
+    margin: 30px 0;
+}
+
+#offerDiv hr,
+#dailyMenu hr,
+#todaySpecial hr,
+#ourShop hr{
+    margin: 30px auto;
+    width: 50%;
+    background-color: #f0f0f0;
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+}
+
+#offerDiv>p,
+#dailyMenu>p,
+#todaySpecial>p,
+#ourShop>p{
+    width: 800px;
+    text-align: center;
+    margin: 50px auto;
+}
+
+.offerGrid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-bottom: 100px;
+}
+
+.offerGrid div{
+    padding: 0 50px 50px 50px;
+    text-align: center;
+}
+
+.offerGrid div p{
+    line-height: 30px;
+    text-align: justify;
+    word-spacing: 7px;
+}
+
+.offerGrid img{
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    margin: 50px auto;
+}
+
+.offerGrid div h3{
+    font-family: logo;
+    margin-bottom: 20px;
+}
+
+/* Today special */
+.grid-item1{ grid-area: item1; }
+.grid-item2{ grid-area: item2; }
+.grid-item3{ grid-area: item3; }
+.grid-item4{ grid-area: item4; }
+
+.todaySpecial-grid{
+    display: grid;
+    grid-template-areas: 'item1 item2 item2' 'item1 item3 item4';
+    padding: 0 150px 50px 150px;
+}
+
+.todaySpecial-grid img{
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.grid-item1 img{
+    width: 550px;
+    height: 435px;
+    object-fit: cover;
+}
+
+.grid-item2 img{
+    width: 430px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.grid-item3 img,
+.grid-item4 img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Our Shop */
+#ourShop {
+    padding: 0 150px;
+    margin: 120px 0;
+}
+
+#ourShop img{
+    width: 300px;
+    height: 280px;
+    padding: 20px 60px;
+    float: left;
+    opacity: 0.7;
+}
+
+.clearfix {
+    overflow: auto;
+}
+
+#ourShop h3{
+    font-family: logo;
+    font-size: 20px;
+    padding: 20px;
+}
+
+#ourShop p{
+    line-height: 1.5;
+}
+
+/* Daily Menu */
+#dailyMenu{
+    margin: 20px 80px;
+}
+
+.flex-container {
+    display: flex;
+    margin: 30px 50px 100px;
+}
+
+.flex-container img{
+    width: 300px;
+    height: 300px;
+    padding: 20px 100px;
+}
+
+.flex-container div{
+    padding: 20px 100px;
+}
+
+.flex-container h3{
+    padding: 15px;
+}
+
+.flex-container li{
+    line-height: 2;
+}
+
+
+/* footer */
+#footerDiv{
+    display: flex;
+}
+
+#footerDiv p{
+    background-color: #1c2530;
+    color: #fff;
+    width: 100%;
+    text-align: left;
+    padding: 40px;
+}
